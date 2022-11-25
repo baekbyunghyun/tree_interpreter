@@ -1,7 +1,7 @@
 import numpy as np
 
 
-class LifeHabit:
+class InterpretedVariable:
     def __init__(self):
         self.variable_name = None
         self.value_list = list()
@@ -10,13 +10,13 @@ class LifeHabit:
 
     @staticmethod
     def generate(variable_name, value, similarity, threshold):
-        life_habit = LifeHabit()
-        life_habit.variable_name = variable_name
-        life_habit.value_list.append(value)
-        life_habit.similarity_list.append(similarity)
-        life_habit.threshold_list.append(threshold)
+        interpreted_variable = InterpretedVariable()
+        interpreted_variable.variable_name = variable_name
+        interpreted_variable.value_list.append(value)
+        interpreted_variable.similarity_list.append(similarity)
+        interpreted_variable.threshold_list.append(threshold)
 
-        return life_habit
+        return interpreted_variable
 
     def __str__(self):
         np.set_printoptions(suppress=True)
